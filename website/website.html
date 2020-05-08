@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<title>Open Cities AI Challenge</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<style>
+    h1,
+    h2,
+    h3 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+    }
+
+    body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #212121;
+    }
+
+    .buildings-background {
+        background-image: url("resources/OCAI-edit.png");
+        background-color: #212121;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: cover;
+        position: relative;
+        height: 500px;
+        background-position: center;
+    }
+
+    .text-background {
+        background-color: #212121;
+    }
+
+    .title-and-subtitle {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    .w3-row-padding img {
+        margin-bottom: 12px
+    }
+
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {
+        width: 120px;
+        background: #181818;
+    }
+
+    /* Add a left margin to the "page content" that matches th9+e width of the sidebar (120px) */
+
+    #main {
+        margin-left: 120px
+    }
+
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {
+        #main {
+            margin-left: 0
+        }
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .topnav-right {
+        padding-bottom: 16px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .image-center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+</style>
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    <!-- Avatar image in top left corner -->
+
+    <a href="#" class="w3-bar-item w3-button w3-hover-none w3-text-light-grey w3-hover-text-aqua">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>HOME</p>
+    </a>
+    <a href="resources/report.pdf" download
+        class="w3-bar-item w3-button w3-padding-large w3-text-light-grey w3-hover-none w3-hover-text-aqua">
+        <i class='fas fa-file-pdf-o w3-xxlarge'></i>
+        <p>REPORT</p>
+    </a>
+    <a href="resources/presentation.pdf" download
+        class="w3-bar-item w3-button w3-padding-large w3-hover-none w3-text-light-grey w3-hover-text-aqua">
+        <i class='fas fa-file-powerpoint-o w3-xxlarge'></i>
+        <p>PREVIEW</p>
+    </a>
+    <a href="resources/source-code.zip" download
+        class="w3-bar-item w3-button w3-padding-large w3-hover-none w3-text-light-grey w3-hover-text-aqua">
+        <i class="fas fa-file-code w3-xxlarge"></i>
+        <p>PROJECT</p>
+    </a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-text-light-grey w3-hover-none w3-hover-text-aqua">
+        <i class="fa fa-user w3-xxlarge"></i>
+        <p>ABOUT</p>
+    </a>
+    <div class="topnav-right">
+        <img src="resources/ai-icon-edit.png" style="width:80%">
+    </div>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="#" class="w3-bar-item w3-button w3-hover-none w3-text-light-grey w3-hover-text-aqua"
+            style="width:20% !important">HOME</a>
+        <a href="resources/report.pdf" download
+            class="w3-bar-item w3-button w3-hover-none w3-text-light-grey w3-hover-text-aqua"
+            style="width:20% !important">REPORT</a>
+        <a href="resources/presentation.pdf" download
+            class="w3-bar-item w3-button w3-hover-none w3-text-light-grey w3-hover-text-aqua"
+            style="width:20% !important">PREVIEW</a>
+        <a href="resources/source-code.zip" download
+            class="w3-bar-item w3-button w3-hover-none w3-text-light-grey w3-hover-text-aqua"
+            style="width:20% !important">PROJECT</a>
+        <a href="#about" class="w3-bar-item w3-button w3-hover-none w3-text-light-grey w3-hover-text-aqua"
+            style="width:20% !important">ABOUT</a>
+    </div>
+</div>
+
+<!-- Page Content -->
+<div class="" id="main">
+    <div class="buildings-background">
+        <div class="title-and-subtitle">
+            <h1 class="w3-jumbo">Open Cities AI Challenge</h1>
+            <p class="w3-xlarge w3-wide">Segmenting Buildings for Disaster Resilience</p>`
+        </div>
+    </div>
+    <div class="text-background w3-text-light-grey">
+        <div class="w3-content w3-padding-large" id="competition-overview">
+            <h2 class="w3-text-light-grey w3-wide"><i
+                    class="fas fa-award w3-xxlarge w3-margin-right w3-text-aqua"></i>Competition
+                Overview
+            </h2>
+            <hr style="width: 575px;" class="w3-opacity">
+            <p class="w3-large">Open Cities AI Challenge: Segmenting Buildings for Disaster Resilience is a competition
+                hosted by DRIVENDATA which aims to accelerate the development of more accurate, relevant and usable
+                open-source AI models to support mapping for disaster risk management in African cities.</p>
+            <p class="w3-large">The objective of this challenge is to map building footprints only by having access to
+                drone
+                imagery and thus simulating an event of a natural hazard. Participants are tasked to build an AI model
+                to
+                classify the presence or absence of buildings on a pixel by pixel basis.</p>
+        </div>
+        <div class="w3-content w3-padding-large" id="course-overview">
+            <h2 class="w3-text-light-grey w3-wide "><i
+                    class="fas fa-graduation-cap w3-xxlarge w3-margin-right w3-text-aqua"></i>Course
+                Overview
+            </h2>
+            <hr style="width: 460px;" class="w3-opacity">
+            <p class="w3-large">This competition was selected as our CS513 autonomous agents class project. As image
+                segmentation was revolutionized by the use of deep convolutional neural networks and is one of the most
+                complex tasks in computer vision, this project was also a decent fit for this class.
+            </p>
+        </div>
+
+
+        <!-- Grid for pricing tables -->
+        <div class="w3-content w3-padding-large" id="project-stats">
+            <h2 class="w3-text-light-grey w3-wide"><i
+                    class="fas fa-poll w3-xxlarge w3-margin-right w3-text-aqua"></i>Project Stats
+            </h2>
+            <hr style="width:320px" class="w3-opacity ">
+            <p class="w3-large">The following tables show some basic and technical information about our project.</p>
+
+            <div class="w3-row-padding">
+                <div class="w3-half w3-margin-bottom">
+                    <ul class="w3-ul w3-grey w3-center w3-opacity w3-hover-opacity-off">
+                        <li class="w3-black w3-xlarge w3-padding-32 w3-wide">General Stats</li>
+                        <li class="w3-padding-16"><b>Programming Language: </b>Python</li>
+                        <li class="w3-padding-16"><b>Code Format: </b>Jupyter Notebook</li>
+                        <li class="w3-padding-16"><b>Code Environment: </b>Google Colab</li>
+                        <li class="w3-padding-16"><b>Implemented Framework: </b>Keras</li>
+                    </ul>
+                </div>
+
+                <div class="w3-half">
+                    <ul class="w3-ul w3-grey w3-center w3-opacity w3-hover-opacity-off">
+                        <li class="w3-black w3-xlarge w3-padding-32">Techincal Stats</li>
+                        <li class="w3-padding-16"><b>Deep Learning Model: </b>U-net</li>
+                        <li class="w3-padding-16"><b>Metrics: </b>Average Accuracy, Jaccard</li>
+                        <li class="w3-padding-16"><b>Loos Function: </b>Binary Crossentropy</li>
+                        <li class="w3-padding-16"><b>Optimizer: </b>Adam</li>
+                    </ul>
+                </div>
+                <!-- End Grid/Pricing tables -->
+            </div>
+        </div>
+
+
+        <div class="w3-content w3-padding-large" id="photos">
+            <h2 class="w3-text-light-grey w3-wide "><i
+                    class="fas fa-clipboard-check w3-xxlarge w3-margin-right w3-text-aqua"></i>Results</h2>
+            <hr style="width:240px" class="w3-opacity">
+            <p class="w3-large">In the following images, we can see the results that we achieved. On the left, we
+                present the original image, while the right mask is generated by our model.
+            </p>
+            <!-- Grid for photos -->
+            <div class="w3-row-padding" style="margin:16px">
+                <div class="w3-half">
+                    <img src="resources/media-files/3c3f4a.jpg" style="width:100%">
+                    <img src="resources/media-files/4f5abf.jpg" style="width:100%">
+                    <img src="resources/media-files/9d7926.jpg" style="width:100%">
+                </div>
+
+                <div class="w3-half">
+                    <img src="resources/media-files/3c3f4a_predict.jpg" style="width:100%">
+                    <img src="resources/media-files/4f5abf_predict.jpg" style="width:100%">
+                    <img src="resources/media-files/9d7926_predict.jpg" style="width:100%">
+                </div>
+                <!-- End photo grid -->
+            </div>
+            <p class="w3-large">For more information you can always check out our short presentation and our report. The
+                source code is also available for download.
+            </p>
+            <p class="w3-large">This competition was completed on March 16th and our team “La Geo Stormers” was
+                ranked 108th out of 1106 participants.
+            </p>
+            <!-- End Portfolio Section -->
+            <img src="resources/ocai-score.png" alt="score" class="image-center">
+            
+        </div>
+
+        <!-- Contact Section -->
+        <!-- Testimonials -->
+        <div class="w3-padding-large w3-content" id="about">
+            <h2 class="w3-text-light-grey w3-wide "><i
+                    class="fa fa-user w3-xxlarge w3-margin-right w3-text-aqua"></i>About</h2>
+            <hr style="width:190px" class="w3-opacity">
+            <img src="resources/michalis.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+            <p class="w3-large"><span class="w3-large w3-margin-right">Michalis Galanis</span></p>
+            <p>mgalanis2000@gmail.com</p><br>
+
+            <img src="resources/kostas.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+            <p></p><span class="w3-large w3-margin-right">Kostantinos Vlachos</span></p>
+            <p>konosv98@hotmail.com</p>
+
+            <!-- END PAGE CONTENT -->
+        </div>
+    </div>
+    </body>
+
+</html>
